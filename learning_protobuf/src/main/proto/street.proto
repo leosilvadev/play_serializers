@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package country;
+
+option java_package = "com.github.leosilvadev.protobuf.city";
+
+import "city.proto";
+
+message Street {
+
+  string name = 1;
+  City city = 2;
+
+}

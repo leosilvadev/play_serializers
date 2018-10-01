@@ -1,0 +1,31 @@
+plugins {
+    id 'idea'
+    id 'java'
+    id 'com.google.protobuf' version '0.8.6'
+}
+
+group 'com.github.leosilvadev.protobuf'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+ext {
+    protobufVersion = '3.6.1'
+    junitVersion = '4.12'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "com.google.protobuf:protobuf-java:$protobufVersion"
+
+    testCompile "junit:junit:$junitVersion"
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:$protobufVersion"
+    }
+}

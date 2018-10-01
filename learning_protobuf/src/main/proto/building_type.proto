@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package country;
+
+option java_package = "com.github.leosilvadev.protobuf.city";
+
+enum BuildingType {
+    UNKNOWN = 0;
+    HOUSE = 1;
+    APARTMENT = 2;
+}
